@@ -6,7 +6,7 @@
 /*   By: ckrasniq <ckrasniq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 20:06:20 by ckrasniq          #+#    #+#             */
-/*   Updated: 2024/11/13 19:54:19 by ckrasniq         ###   ########.fr       */
+/*   Updated: 2024/11/13 20:24:08 by ckrasniq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,28 +104,3 @@ char	*ft_strdup(const char *src)
 	array[i] = '\0';
 	return (array);
 }
-
-// void	*ft_memset(void *ptr, int i, size_t n)
-// {
-// 	unsigned char	*str;
-
-// 	str = ptr;
-// 	while (n--)
-// 	{
-// 		*str++ = (unsigned char)i;
-// 	}
-// 	return (ptr);
-// }
-
-// void	*ft_calloc(size_t count, size_t size)
-// {
-// 	size_t	total_size;
-// 	void	*ptr;
-
-// 	total_size = count * size;
-// 	ptr = malloc(total_size);
-// 	if (!ptr)
-// 		return (NULL);
-// 	ft_memset(ptr, 0, total_size);
-// 	return (ptr);
-// }
