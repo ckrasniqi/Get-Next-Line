@@ -6,7 +6,7 @@
 /*   By: ckrasniq <ckrasniq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 20:06:15 by ckrasniq          #+#    #+#             */
-/*   Updated: 2024/11/15 14:03:51 by ckrasniq         ###   ########.fr       */
+/*   Updated: 2024/11/13 20:23:37 by ckrasniq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,9 @@
 # include <stdbool.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include <fcntl.h>
-# include <stdio.h>
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 10000000
+#  define BUFFER_SIZE 100
 # endif
 
 char	*get_next_line(int fd);

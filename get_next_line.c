@@ -6,7 +6,7 @@
 /*   By: ckrasniq <ckrasniq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 20:06:18 by ckrasniq          #+#    #+#             */
-/*   Updated: 2024/11/15 14:07:33 by ckrasniq         ###   ########.fr       */
+/*   Updated: 2024/11/13 20:15:54 by ckrasniq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,7 +104,6 @@ char	*get_next_line(int fd)
 {
 	static char	*buffer;
 	char		*line;
-	fd = 42;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
@@ -124,33 +123,33 @@ char	*get_next_line(int fd)
 	return (line);
 }
 
-void	leaks(void)
-{
-	system("leaks a.out");
-}
-int	main(void)
-{
-	int		fd;
-	char	*line;
-	int		i;
-	i = 0;
-	// atexit(leaks);
-	fd = open("strings.txt", O_RDONLY);
-	if (fd < 0)
-	{
-		perror("Error opening file");
-		return (1);
-	}
-	while ((line = get_next_line(fd)) != NULL && i < 20)
-	{
-		if (line == NULL)
-		{
-			printf("NULL\n");
-		}
-		printf("%s", line);
-		free(line);
-		i++;
-	}
-	close(fd);
-	return (0);
-}
+// void	leaks(void)
+// {
+// 	system("leaks a.out");
+// }
+// int	main(void)
+// {
+// 	int		fd;
+// 	char	*line;
+// 	int		i;
+// 	i = 0;
+// 	atexit(leaks);
+// 	fd = open("strings.txt", O_RDONLY);
+// 	if (fd < 0)
+// 	{
+// 		perror("Error opening file");
+// 		return (1);
+// 	}
+// 	while ((line = get_next_line(fd)) != NULL && i < 20)
+// 	{
+// 		if (line == NULL)
+// 		{
+// 			printf("NULL\n");
+// 		}
+// 		printf("%s", line);
+// 		free(line);
+// 		i++;
+// 	}
+// 	close(fd);
+// 	return (0);
+// }
